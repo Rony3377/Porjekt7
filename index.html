@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>animation übungen</title>
+  </head>
+  <style>
+    /*****main box1 *****/
+    main {
+      background-image: url(https://s-media-cache-ak0.pinimg.com/736x/63/9d/0c/639d0c6510f7716beb124b5ad8396ce5--background-clipart-gambar.jpg);
+      width: 500vw;
+      height: 100vh;
+      background-repeat: no-repeat;
+      animation-name: box1;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-timing-function: ease;
+    }
+    /*****main box1 keyfram*****/
+    @keyframes box1 {
+      0% {
+        filter: sepia(2) brightness(1) hue-rotate(80deg) blur(2px);
+      }
+
+      100% {
+        filter: sepia(1) brightness(1, 5) hue-rotate(50deg) blur(-1px);
+      }
+    }
+    /*****main box1 img*****/
+    .box1 img {
+      width: 50px;
+      height: 50px;
+    }
+    /*****main box1 img sun *****/
+    .sun {
+      position: absolute;
+      top: 400px;
+      left: 350px;
+      animation-name: sun;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+      animation-timing-function: ease;
+    }
+    /*****main box1 img sun keyfram*****/
+    @keyframes sun {
+      0% {
+        top: 200px;
+      }
+
+      100% {
+        top: 100px;
+      }
+    }
+    /*****main box1 img haus *****/
+    .haus {
+      position: absolute;
+      top: 235px;
+      left: 350px;
+      background-color: rgb(228, 218, 218);
+    }
+  </style>
+  <body>
+    <!--main beginn-->
+    <main>
+      <!--main box1-->
+      <div class="box1">
+        <!--main box1 img sun-->
+        <div class="sun">
+          <img src="sun.png" alt="" />
+        </div>
+        <!--main box1 img haus-->
+        <div class="haus">
+          <img src="h.png" alt="" />
+        </div>
+      </div>
+    </main>
+    <!--main ende-->
+  </body>
+</html>
